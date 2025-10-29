@@ -1,8 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTypes", "src\Common\CommonTypes\CommonTypes.csproj", "{652D5298-B10F-41B7-B3DD-B73E13588646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{61287BB1-7F9F-4538-9680-404A78D9389C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48C55F1E-E857-495F-A26C-E88FC69F71F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{652D5298-B10F-41B7-B3DD-B73E13588646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652D5298-B10F-41B7-B3DD-B73E13588646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652D5298-B10F-41B7-B3DD-B73E13588646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652D5298-B10F-41B7-B3DD-B73E13588646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{652D5298-B10F-41B7-B3DD-B73E13588646} = {61287BB1-7F9F-4538-9680-404A78D9389C}
 	EndGlobalSection
 EndGlobal
