@@ -6,6 +6,7 @@ using CommonTypes;
 using FluentAssertions;
 using JetBrains.Annotations;
 using Xunit;
+using Encoding = System.Text.Encoding;
 
 namespace BinaryData.Tests;
 
