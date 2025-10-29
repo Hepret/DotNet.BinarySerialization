@@ -1,5 +1,5 @@
-﻿using System.Text;
-using CommonTypes;
+﻿using CommonTypes;
+using Encoding = System.Text.Encoding;
 
 namespace BinaryData.Extensions;
 
@@ -239,7 +239,7 @@ public static class BinaryDataExtensions
     /// <exception cref="ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
     public static BinaryData AddUtf8String(this BinaryData binary, string value)
     {
-        if (value is null) throw new ArgumentNullException(nameof(value));
+        ArgumentNullException.ThrowIfNull(value);
         var bytes = Encoding.UTF8.GetBytes(value);
         binary.AddRange(bytes);
         return binary;
@@ -254,7 +254,7 @@ public static class BinaryDataExtensions
     /// <exception cref="ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
     public static BinaryData AddUnicodeString(this BinaryData binary, string value)
     {
-        if (value is null) throw new ArgumentNullException(nameof(value));
+        ArgumentNullException.ThrowIfNull(value);
         var bytes = Encoding.Unicode.GetBytes(value);
         binary.AddRange(bytes);
         return binary;
@@ -269,7 +269,7 @@ public static class BinaryDataExtensions
     /// <exception cref="ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
     public static BinaryData AddUtf32String(this BinaryData binary, string value)
     {
-        if (value is null) throw new ArgumentNullException(nameof(value));
+        ArgumentNullException.ThrowIfNull(value);
         var bytes = Encoding.UTF32.GetBytes(value);
         binary.AddRange(bytes);
         return binary;
@@ -284,7 +284,7 @@ public static class BinaryDataExtensions
     /// <exception cref="ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
     public static BinaryData AddAsciiString(this BinaryData binary, string value)
     {
-        if (value is null) throw new ArgumentNullException(nameof(value));
+        ArgumentNullException.ThrowIfNull(value);
         var bytes = Encoding.ASCII.GetBytes(value);
         binary.AddRange(bytes);
         return binary;
