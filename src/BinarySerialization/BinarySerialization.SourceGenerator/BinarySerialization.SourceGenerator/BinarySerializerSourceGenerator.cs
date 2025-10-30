@@ -12,7 +12,11 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
 
     private static void PostInitializationCallback(IncrementalGeneratorPostInitializationContext context)
     {
-        context.AddBinarySerializableAttribute();
-        context.AddFieldAttribute();
+        context
+            .AddBinarySerializableAttribute()
+            .AddFieldAttribute()
+            .AddEncodingEnum()
+            .AddEndianEnum()
+            .AddNumFieldAttribute();
     }
 }
