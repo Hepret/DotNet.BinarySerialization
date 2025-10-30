@@ -17,6 +17,7 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
             .AddFieldAttribute()
             .AddEncodingEnum()
             .AddEndianEnum()
-            .AddNumFieldAttribute();
+            .AddNumFieldAttribute()
+            .AddIBinarySerializableInterface();
     }
 }

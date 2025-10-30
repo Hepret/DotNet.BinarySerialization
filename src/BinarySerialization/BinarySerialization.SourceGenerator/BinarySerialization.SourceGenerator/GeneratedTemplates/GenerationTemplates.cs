@@ -14,4 +14,5 @@ internal static class GenerationTemplates
     private const string Public = "public";
     public const string PublicClass = $"{Public} class";
     public const string PublicEnum = $"{Public} enum";
+    public const string PublicInterface = $"{Public} interface";
 }

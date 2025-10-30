@@ -44,6 +44,13 @@ public static class IncrementalGeneratorPostInitializationContextExtensions
         context.AddSource(GenerateCommonFileName("Endian"), EnumEndianDeclaration.Text);
         return context;
     }
+    
+    public static IncrementalGeneratorPostInitializationContext AddIBinarySerializableInterface(
+        this IncrementalGeneratorPostInitializationContext context)
+    {
+        context.AddSource(GenerateCommonFileName("IBinarySerializable"), InterfaceIBinarySerializableDeclaration.Text);
+        return context;
+    }
 
 
     private static string GenerateCommonFileName(string name)
