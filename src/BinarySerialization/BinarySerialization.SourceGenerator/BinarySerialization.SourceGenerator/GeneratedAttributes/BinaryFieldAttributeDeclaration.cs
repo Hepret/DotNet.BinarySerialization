@@ -16,6 +16,7 @@ public static class BinaryFieldAttributeDeclaration
           {{GenerationTemplates.PublicClass}} FieldAttribute : {{GenerationAttributesTemplates.Attribute}} 
           { 
                 public int Position { get; init; }
+                public string DescriptionName { get; init; } = default!;
           }
           """;
     
