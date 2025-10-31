@@ -23,7 +23,7 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
         // Add Generated Types
         //context.RegisterPostInitializationOutput(PostInitializationCallback);
 
-      
+
         var provider = context.SyntaxProvider.CreateSyntaxProvider
         (
             SyntacticPredicate, 
@@ -33,24 +33,24 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
         context.RegisterSourceOutput(provider, Execute);
     }
 
-    private void Execute(SourceProductionContext context, BinarySerializationGenerationContext? subject)
+    private void Execute(SourceProductionContext arg1, (TypeDeclarationSyntax candidate, ISymbol symbol)? arg2)
     {
-        if (!subject.HasValue)
-            return;
-        var num = 0;
-        num += 1;
+        return;
     }
+
 
 
     private static bool SyntacticPredicate(SyntaxNode node, CancellationToken cancellationToken)
     {
-        return node is ClassDeclarationSyntax or StructDeclarationSyntax
-               && ((TypeDeclarationSyntax)node).Modifiers.Any(SyntaxKind.PartialKeyword)
-               && !((TypeDeclarationSyntax)node).Modifiers.Any(SyntaxKind.StaticKeyword)
-               && ((TypeDeclarationSyntax)node).BaseList is not null;
+        return node is TypeDeclarationSyntax type
+               && type.Modifiers.Any(SyntaxKind.PartialKeyword)
+               && type.Modifiers.Any(SyntaxKind.PartialKeyword)
+               && !type.Modifiers.Any(SyntaxKind.AbstractKeyword)
+               && type.BaseList?.Types.Any() is true
+               && node is ClassDeclarationSyntax or StructDeclarationSyntax;
     }
 
-    private BinarySerializationGenerationContext? SemanticTransform(GeneratorSyntaxContext context, CancellationToken cancellationToken)
+    private (TypeDeclarationSyntax candidate, ISymbol symbol)? SemanticTransform(GeneratorSyntaxContext context, CancellationToken cancellationToken)
     {
         
         Debug.Assert(context.Node is TypeDeclarationSyntax);
@@ -59,11 +59,10 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
         if (symbol is not INamedTypeSymbol type)
             return null;
         
-        var binarySerializableInterface = context.SemanticModel.Compilation.GetTypeByMetadataName("Hepret.BinarySerialization.Common.IBinarySerializable");
+        var binarySerializableInterface = context.SemanticModel.Compilation.GetTypeByMetadataName("BinarySerialization.Common.IBinarySerializable");
         if (binarySerializableInterface is null || !type.Interfaces.Contains(binarySerializableInterface))
             return null;
-        var binaryContext = GetBinarySerializationContext(context, candidate, type);
-        return binaryContext;
+        return (candidate, symbol);
     }
 
     private BinarySerializationGenerationContext? GetBinarySerializationContext(
