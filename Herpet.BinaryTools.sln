@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization.SourceG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization.SourceGenerator.Tests", "src\BinarySerialization\BinarySerialization.SourceGenerator\BinarySerialization.SourceGenerator.Tests\BinarySerialization.SourceGenerator.Tests.csproj", "{E4DDEFB3-38DA-468F-8FD0-A77394053D9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization.Attributes", "src\BinarySerialization\BinarySerialization.Attributes\BinarySerialization.Attributes.csproj", "{D7A25961-A304-4EA7-9FCF-9BB35278D129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization.Common", "src\BinarySerialization\BinarySerialization.Common\BinarySerialization.Common.csproj", "{A1748F80-2BDA-46C1-910B-872355AF9339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,14 @@ Global
 		{E4DDEFB3-38DA-468F-8FD0-A77394053D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4DDEFB3-38DA-468F-8FD0-A77394053D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4DDEFB3-38DA-468F-8FD0-A77394053D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A25961-A304-4EA7-9FCF-9BB35278D129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A25961-A304-4EA7-9FCF-9BB35278D129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A25961-A304-4EA7-9FCF-9BB35278D129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A25961-A304-4EA7-9FCF-9BB35278D129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1748F80-2BDA-46C1-910B-872355AF9339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1748F80-2BDA-46C1-910B-872355AF9339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1748F80-2BDA-46C1-910B-872355AF9339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1748F80-2BDA-46C1-910B-872355AF9339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{652D5298-B10F-41B7-B3DD-B73E13588646} = {61287BB1-7F9F-4538-9680-404A78D9389C}
@@ -77,5 +89,7 @@ Global
 		{288FF007-34E0-4EEF-B89F-B59B5AFA5B58} = {0D5EFCAB-7C40-41ED-8956-D693DA9E916E}
 		{1BE15106-CDF6-4632-8620-2C82714A0072} = {0D5EFCAB-7C40-41ED-8956-D693DA9E916E}
 		{E4DDEFB3-38DA-468F-8FD0-A77394053D9E} = {0D5EFCAB-7C40-41ED-8956-D693DA9E916E}
+		{D7A25961-A304-4EA7-9FCF-9BB35278D129} = {0D5EFCAB-7C40-41ED-8956-D693DA9E916E}
+		{A1748F80-2BDA-46C1-910B-872355AF9339} = {0D5EFCAB-7C40-41ED-8956-D693DA9E916E}
 	EndGlobalSection
 EndGlobal

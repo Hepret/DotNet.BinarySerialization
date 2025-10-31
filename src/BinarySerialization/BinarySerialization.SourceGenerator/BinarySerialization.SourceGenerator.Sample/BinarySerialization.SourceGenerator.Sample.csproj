@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\BinarySerialization.Attributes\BinarySerialization.Attributes.csproj" />
+        <ProjectReference Include="..\..\BinarySerialization.Common\BinarySerialization.Common.csproj" />
         <ProjectReference Include="..\BinarySerialization.SourceGenerator\BinarySerialization.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 

@@ -1,7 +1,7 @@
 
 using System;
-using Hepret.BinarySerialization.Attributes;
-using Hepret.BinarySerialization.Common;
+using BinarySerialization.Attributes;
+using BinarySerialization.Common;
 
 namespace Test;
 
@@ -31,7 +31,7 @@ partial struct Sample : IBinarySerializable
         throw new System.NotImplementedException();
     }
 
-    public string TableInfo()
+    public string GetMetadata()
     {
         throw new System.NotImplementedException();
     }
@@ -56,7 +56,7 @@ partial class Packet : IBinarySerializable
         throw new System.NotImplementedException();
     }
 
-    public string TableInfo()
+    public string GetMetadata()
     {
         throw new System.NotImplementedException();
     }

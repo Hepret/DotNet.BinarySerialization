@@ -21,7 +21,7 @@ public class BinarySerializerSourceGenerator : IIncrementalGenerator
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
         // Add Generated Types
-        context.RegisterPostInitializationOutput(PostInitializationCallback);
+        //context.RegisterPostInitializationOutput(PostInitializationCallback);
 
       
         var provider = context.SyntaxProvider.CreateSyntaxProvider
